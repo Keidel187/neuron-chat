@@ -3,8 +3,8 @@ import ctypes
 import os
 from components.locate_assets import asset_path
 
-myappid = '55'
-ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+APP_USER_MODEL_ID = '55'  # Windows App User Model ID for taskbar grouping, notifications, etc.
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(APP_USER_MODEL_ID)
 
 WINDOW_SIZE = "600x500"
 
