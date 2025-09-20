@@ -16,10 +16,15 @@ def locate_assets_dir():
             return c
     
     # If not found, traverse upwards to find "assets" directory
-    for root,dirs, _ in os.walk(base_dir):
-        if "assets" in dirs:
-            return os.path.join(root, "assets")
-        
+    current_dir = base_dir
+    while True:
+        assets_dir = os.path.join(current_dir, "assets")
+        if os.path.isdir(assets_dir):
+            return assets_dir
+        parent_dir = os.path.dirname(current_dir)
+        if parent_dir == current_dir:
+            break
+        current_dir = parent_dir
     # If not found, return None    
     return None
 
