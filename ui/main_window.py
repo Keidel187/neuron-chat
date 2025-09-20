@@ -1,7 +1,7 @@
 import customtkinter as ctk
 import ctypes
 import os
-from compontens.locate_assets import asset_path
+from components.locate_assets import asset_path
 
 myappid = '55'
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
