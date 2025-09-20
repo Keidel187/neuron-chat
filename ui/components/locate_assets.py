@@ -17,14 +17,25 @@ def locate_assets_dir():
     
     # If not found, traverse upwards to find "assets" directory
     current_dir = base_dir
+
     while True:
+        # Check if "assets" directory exists in the current directory
         assets_dir = os.path.join(current_dir, "assets")
+
+        # If found, return the path
         if os.path.isdir(assets_dir):
             return assets_dir
+        
+        # Move one level up
         parent_dir = os.path.dirname(current_dir)
+
+        # If we have reached the root directory, stop searching
         if parent_dir == current_dir:
             break
+
+        # Move up one level
         current_dir = parent_dir
+
     # If not found, return None    
     return None
 
