@@ -13,9 +13,9 @@ class Message(Base):
     __tablename__ = "messages"
 
     id = Column(Integer, primary_key=True, index=True)
-    conversation_id = Column(String)
-    role = Column(String)
-    content = Column(String)
+    conversation_id = Column(String(255)) # Restricted to 255 identifiers for indexing
+    role = Column(String(255)) # e.g., "user" or "assistant"
+    content = Column(String) # Limitless text content
     timestamp = Column(DateTime, default=datetime.now)
 
 class Database:
