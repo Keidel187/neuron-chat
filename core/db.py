@@ -13,9 +13,9 @@ class Message(Base):
     __tablename__ = "messages"
 
     id = Column(Integer, primary_key=True, index=True)
-    conversation_id = Column(String(255)) # Restricted to 255 identifiers for indexing
-    role = Column(String(255)) # e.g., "user" or "assistant"
-    content = Column(String) # Limitless text content
+    conversation_id = Column(String(255), nullable=False)  # Restricted to 255 identifiers for indexing
+    role = Column(String(255), nullable=False)  # e.g., "user" or "assistant"
+    content = Column(String, nullable=False)  # Limitless text content
     timestamp = Column(DateTime, default=datetime.now)
 
 class Database:
@@ -64,7 +64,7 @@ class Database:
 
             db.add(new_message)
             db.commit()
-            db.refresh(new_message) # Refresh to get the new ID
+            db.refresh(new_message)  # Refresh to get the new ID
 
             return new_message
         
