@@ -78,4 +78,16 @@ class Database:
             db.close()
 
     def get_message(self, conversation_id):
-        pass
+        """
+        Retrieve all messages for a given conversation_id.
+        Returns a list of Message objects.
+        """
+        db = self.SessionLocal()
+        try:
+            messages = db.query(Message).filter(Message.conversation_id == conversation_id).order_by(Message.timestamp).all()
+            return messages
+        except Exception as e:
+            db.rollback()
+            raise e
+        finally:
+            db.close()
