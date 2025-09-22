@@ -4,7 +4,7 @@
 
 ## 🚀 Overview
 
-Neuron Chat is a [FILL: detailed description of your application's purpose and main value proposition]. This application allows users to [FILL: main functionality] while ensuring complete privacy and data control by running everything locally.
+Neuron Chat is a [FILL: detailed description of your application's purpose and main value proposition]. This application allows users to feel the Power of AI while ensuring complete privacy and data control by running everything locally.
 
 ## ✨ Features
 
@@ -17,10 +17,10 @@ Neuron Chat is a [FILL: detailed description of your application's purpose and m
 
 ## 🛠️ Technology Stack
 
-- **Frontend**: [FILL: e.g., React, Vue, Angular, etc.]
+- **Frontend**: Customtkinter (https://customtkinter.tomschimansky.com/)
 - **Backend**: [FILL: e.g., Node.js, Python, etc.]
 - **AI Integration**: [FILL: e.g., Ollama, Hugging Face, etc.]
-- **Database**: [FILL: if applicable]
+- **Database**: Default: PostgreSQL
 - **Other**: [FILL: other technologies used]
 
 ## 📋 Prerequisites
@@ -162,11 +162,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Keidel187**
 
 - GitHub: [@Keidel187](https://github.com/Keidel187)
-- [FILL: Other contact information if desired]
 
 ## 🙏 Acknowledgments
 
-- [FILL: Credits to libraries, inspirations, etc.]
+- Inspiration: https://github.com/chatboxai/chatbox
 - [FILL: Special thanks]
 
 ## 📊 Project Status
@@ -175,4 +174,4 @@ Active Development
 
 ---
 
-*Last updated: [FILL: Date]*
+*Last updated: 22.09.2025*
