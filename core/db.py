@@ -71,9 +71,8 @@ class Database:
         except Exception as e:
             # If an error occurs, rollback the transaction
             db.rollback()
-
             raise e
-        
+
         finally:
             db.close()
 
@@ -85,9 +84,12 @@ class Database:
         db = self.SessionLocal()
         try:
             messages = db.query(Message).filter(Message.conversation_id == conversation_id).order_by(Message.timestamp).all()
+
             return messages
         except Exception as e:
+            # If an error occurs, rollback the transaction
             db.rollback()
             raise e
+
         finally:
             db.close()
