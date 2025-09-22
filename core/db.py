@@ -13,6 +13,16 @@ class Database:
         DB_HOST = "localhost"
         DB_PORT = 5432
 
+        # Validate required environment variables
+        missing_vars = []
+        if not DB_USER:
+            missing_vars.append("POSTGRES_USER")
+        if not DB_PASSWORD:
+            missing_vars.append("POSTGRES_PASSWORD")
+        if not DB_NAME:
+            missing_vars.append("POSTGRES_DB")
+        if missing_vars:
+            raise EnvironmentError(f"Missing required environment variables: {', '.join(missing_vars)}")
         self.engine = create_engine(
             f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
         )
