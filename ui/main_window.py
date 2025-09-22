@@ -5,7 +5,7 @@ from ui.components.locate_assets import asset_path
 WINDOW_SIZE = "600x500"
 
 class MainWindow(ctk.CTk):
-    def __init__(self, ):
+    def __init__(self):
         super().__init__()
 
         self.geometry(WINDOW_SIZE)
