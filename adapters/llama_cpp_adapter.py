@@ -3,7 +3,7 @@ from .base_adapter import BaseAdapter
 
 class LlamaCppAdapter(BaseAdapter):
     def __init__(self, model_path: str = "./models/llama-7b.gguf"):
-        # Modell laden
+        # load modell
         self.llm = Llama(
             model_path=model_path,
             n_ctx=2048, # Context length (token)
