@@ -1,6 +1,6 @@
 import customtkinter as ctk
 import os
-from ui.components.locate_assets import asset_path
+from .components.locate_assets import asset_path
 
 WINDOW_SIZE = "600x500"
 
