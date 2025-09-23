@@ -2,7 +2,7 @@
 
 ## 📝 Preface
 
-Hello! I'm Keidel187, and I want to be transparent about my journey with this project. I'm still learning and developing my skills as a programmer, and I'm using AI assistance to help guide me through this development process. This isn't about AI finishing my code for me - rather, it's about learning from AI as a mentor and teacher while I build something meaningful. Every line of code here represents my learning journey, with AI serving as a helpful companion along the way.
+Hello! I'm the Author of this Project, and I want to be transparent about my journey with this project. I'm still learning and developing my skills as a programmer, and I'm using AI assistance to help guide me through this development process. This isn't about AI finishing my code for me - rather, it's about learning from AI as a mentor and teacher while I build something meaningful. Every line of code here represents my learning journey, with AI serving as a helpful companion along the way.
 
 > A modern, local AI-powered chat application that enables private conversations with AI models without relying on cloud services.
 
