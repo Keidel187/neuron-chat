@@ -8,32 +8,33 @@ Hello! I'm the Author of this Project, and I want to be transparent about my jou
 
 ## 🚀 Overview
 
-Neuron Chat is a [FILL: detailed description of your application's purpose and main value proposition]. This application allows users to feel the Power of AI while ensuring complete privacy and data control by running everything locally.
+Neuron Chat is a privacy-focused, desktop AI chat application built with Python and CustomTkinter that enables users to have intelligent conversations with local AI models. This application allows users to feel the Power of AI while ensuring complete privacy and data control by running everything locally.
 
 ## ✨ Features
 
-- 🤖 **Local AI Processing** - [FILL: describe AI model integration]
+- 🤖 **Local AI Processing** - Powered by Hugging Face Transformers with distilgpt2 model for text generation
 - 🔒 **Privacy First** - All conversations stay on your device
-- 💬 **Intuitive Chat Interface** - [FILL: describe UI/UX features]
-- ⚡ **Fast & Responsive** - [FILL: performance characteristics]
-- 🎨 **Customizable** - [FILL: customization options]
-- 📱 **Cross-Platform** - [FILL: supported platforms]
+- 💬 **Intuitive Chat Interface** - Clean, modern desktop GUI built with CustomTkinter
+- ⚡ **Fast & Responsive** - Lightweight Python application with efficient database storage
+- 🎨 **Customizable** - Modern CustomTkinter theming with light/dark mode support
+- 📱 **Cross-Platform** - Runs on Windows, macOS, and Linux
 
 ## 🛠️ Technology Stack
 
 - **Frontend**: Customtkinter (https://customtkinter.tomschimansky.com/)
-- **Backend**: [FILL: e.g., Node.js, Python, etc.]
-- **AI Integration**: [FILL: e.g., Ollama, Hugging Face, etc.]
+- **Backend**: Python 3.8+
+- **AI Integration**: Hugging Face Transformers (distilgpt2 model)
 - **Database**: Default: PostgreSQL
-- **Other**: [FILL: other technologies used]
+- **Other**: SQLAlchemy ORM, python-dotenv for configuration
 
 ## 📋 Prerequisites
 
 Before running Neuron Chat, ensure you have:
 
-- [FILL: e.g., Node.js 18+, Python 3.8+, etc.]
-- [FILL: specific AI model requirements]
-- [FILL: any other dependencies]
+- Python 3.8+ installed on your system
+- PostgreSQL database (for conversation storage)
+- At least 2GB RAM (for AI model loading)
+- Internet connection (for initial model download)
 
 ## 🚀 Installation
 
@@ -44,20 +45,21 @@ Before running Neuron Chat, ensure you have:
 git clone https://github.com/Keidel187/neuron-chat.git
 cd neuron-chat
 
-# [FILL: Add installation steps]
-# Example:
-# npm install
-# or
-# pip install -r requirements.txt
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Install additional AI dependencies
+pip install transformers torch
 ```
 
 ### AI Model Setup
 
-[FILL: Detailed instructions for setting up AI models]
+The application uses Hugging Face's distilgpt2 model, which will be automatically downloaded on first run.
 
 ```bash
-# Example commands for model setup
-# [FILL: Add specific commands]
+# Set up environment variables for database (optional)
+cp .env.example .env  # Create from template if needed
+# Edit .env with your PostgreSQL credentials
 ```
 
 ## 🖥️ Usage
@@ -65,36 +67,37 @@ cd neuron-chat
 ### Starting the Application
 
 ```bash
-# [FILL: Command to start the application]
-# Example:
-# npm start
-# or
-# python main.py
+# Start the application
+python main.py
 ```
 
 ### Basic Usage
 
-1. [FILL: Step-by-step usage instructions]
-2. [FILL: How to start a conversation]
-3. [FILL: How to configure settings]
+1. Launch the application using `python main.py`
+2. The AI model will load automatically on first startup
+3. Use the chat interface to interact with the AI assistant
 
 ### Configuration
 
-[FILL: Configuration options and how to modify them]
+Configure database connection and other settings using environment variables:
 
-```yaml
-# Example configuration file
-# [FILL: Add configuration examples]
+```env
+# Database Configuration
+POSTGRES_USER=your_username
+POSTGRES_PASSWORD=your_password
+POSTGRES_DB=neuron_chat
+DB_HOST=localhost
+DB_PORT=5432
 ```
 
 ## 📸 Screenshots
 
-[FILL: Add screenshots of your application]
+*Screenshots will be added as the UI development progresses*
 
 ```
-[Screenshot 1: Main chat interface]
-[Screenshot 2: Settings panel]
-[Screenshot 3: Model selection]
+[Main chat interface - Coming soon]
+[AI conversation view - Coming soon]
+[Settings panel - Coming soon]
 ```
 
 ## 🔧 Development
@@ -102,19 +105,31 @@ cd neuron-chat
 ### Setting up Development Environment
 
 ```bash
-# [FILL: Development setup instructions]
+# Clone the repository
+git clone https://github.com/Keidel187/neuron-chat.git
+cd neuron-chat
+
+# Install dependencies including development tools
+pip install -r requirements.txt
+pip install transformers torch
+
+# Set up PostgreSQL database
+# Create database and configure .env file
 ```
 
 ### Building from Source
 
 ```bash
-# [FILL: Build instructions]
+# The application is currently in development
+# Building/packaging instructions will be added later
+python main.py  # Run directly from source
 ```
 
 ### Running Tests
 
 ```bash
-# [FILL: Test commands]
+# Test infrastructure is not yet implemented
+# Manual testing: python main.py
 ```
 
 ## 🤝 Contributing
@@ -129,33 +144,43 @@ We welcome contributions! Please follow these steps:
 
 ### Development Guidelines
 
-- [FILL: Coding standards]
-- [FILL: PR requirements]
-- [FILL: Testing requirements]
+- Follow PEP 8 Python coding standards
+- Use meaningful commit messages
+- Ensure code is well-documented with docstrings
+- Test changes manually before submitting PR
 
 ## 📝 Roadmap
 
-- [ ] [FILL: Future feature 1]
-- [ ] [FILL: Future feature 2]
-- [ ] [FILL: Future feature 3]
+- [ ] Complete chat interface UI implementation
+- [ ] Add support for multiple AI models (GPT, LLaMA, etc.)
+- [ ] Implement conversation history and management
+- [ ] Add settings panel for customization
+- [ ] Implement export/import functionality for conversations
+- [ ] Add plugin system for extensions
 
 ## ❓ FAQ
 
-**Q: [FILL: Common question]**
-A: [FILL: Answer]
+**Q: Do I need an internet connection to use Neuron Chat?**
+A: Only for the initial setup to download the AI model. After that, everything runs locally.
 
-**Q: [FILL: Common question]**
-A: [FILL: Answer]
+**Q: What AI models are supported?**
+A: Currently using distilgpt2 from Hugging Face. More models will be added in future releases.
+
+**Q: Is my conversation data safe?**
+A: Yes, all conversations are stored locally in your PostgreSQL database and never sent to external servers.
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
-- **Issue**: [FILL: Common problem]
-  - **Solution**: [FILL: How to fix it]
+- **Issue**: ModuleNotFoundError for transformers or torch
+  - **Solution**: Run `pip install transformers torch` to install AI dependencies
 
-- **Issue**: [FILL: Common problem]
-  - **Solution**: [FILL: How to fix it]
+- **Issue**: Database connection errors
+  - **Solution**: Ensure PostgreSQL is running and environment variables are correctly set in .env file
+
+- **Issue**: AI model fails to load
+  - **Solution**: Check internet connection for initial model download, ensure sufficient RAM (2GB+)
 
 ## 📄 License
 
@@ -170,7 +195,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Inspiration: https://github.com/chatboxai/chatbox
-- [FILL: Special thanks]
+- Hugging Face for providing excellent AI models and transformers library
+- CustomTkinter community for the modern GUI framework
 
 ## 📊 Project Status
 
@@ -178,4 +204,4 @@ Active Development
 
 ---
 
-*Last updated: 22.09.2025*
+*Last updated: 26.01.2025*
