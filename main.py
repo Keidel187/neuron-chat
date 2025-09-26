@@ -19,5 +19,5 @@ class Main(MainWindow):
 
 if __name__ == "__main__":
     app = Main()
-    app.main_test()
+    app.main_test() # TODO: remove this later
     app.mainloop()
