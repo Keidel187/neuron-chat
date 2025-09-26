@@ -111,7 +111,6 @@ cd neuron-chat
 
 # Install dependencies including development tools
 pip install -r requirements.txt
-pip install transformers torch
 
 # Set up PostgreSQL database
 # Create database and configure .env file
