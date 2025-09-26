@@ -12,7 +12,7 @@ Neuron Chat is a privacy-focused, desktop AI chat application built with Python 
 
 ## ✨ Features
 
-- 🤖 **Local AI Processing** - Powered by Hugging Face Transformers with distilgpt2 model for text generation
+- 🤖 **Local AI Processing** - Powered by Hugging Face Transformers with distilgpt2 model for text generation (coming soon more models and better integration)
 - 🔒 **Privacy First** - All conversations stay on your device
 - 💬 **Intuitive Chat Interface** - Clean, modern desktop GUI built with CustomTkinter
 - ⚡ **Fast & Responsive** - Lightweight Python application with efficient database storage
