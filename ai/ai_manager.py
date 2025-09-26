@@ -2,7 +2,7 @@ from transformers import pipeline
 
 class AIManager:
     def __init__(self):
-        # Testmodel
+        # Test model
         self.generator = pipeline("text-generation", model="distilgpt2")
 
     def generate_text(self, prompt: str) -> str:
