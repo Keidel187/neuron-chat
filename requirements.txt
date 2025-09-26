@@ -1,0 +1,4 @@
+pip==25.2
+customtkinter==5.2.2
+SQLAlchemy==2.0.43
+python-dotenv==1.1.1

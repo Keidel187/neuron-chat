@@ -1,6 +1,6 @@
 import customtkinter as ctk
 import os
-from ui.components.locate_assets import asset_path
+from .components.locate_assets import asset_path
 
 WINDOW_SIZE = "600x500"
 
@@ -18,3 +18,12 @@ class MainWindow(ctk.CTk):
             except Exception:
                 print("Error: Failed to set window icon.")
                 pass
+
+        self.grid_columnconfigure([0, 1, 2, 3, 4], weight=1)
+        self.grid_rowconfigure([0, 1, 2, 3, 4], weight=1)
+
+        self.test_button = ctk.CTkButton(self, text="Test Button", command=self.button_pressed)
+        self.test_button.grid(column=2, row=3, padx=10, pady=5, sticky="nsew")
+
+    def button_pressed(self):
+        print("Button has been pressed!")
