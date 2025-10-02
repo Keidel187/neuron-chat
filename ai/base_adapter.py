@@ -17,7 +17,7 @@ class BaseAIAdapter:
                 self._generator = pipeline("text-generation", model=model_name)
 
             except Exception as e:
-                logging.error(f"Failed to load model '{model_name}: {e}")
+                logging.error(f"Failed to load model '{model_name}': {e}")
                 raise RuntimeError(f"Model initialization failed: {e}")
             
     def generate_text(self, prompt: str, *, max_length: int = 50, num_return_sequences: int = 1, **kwargs) -> str:
@@ -29,7 +29,7 @@ class BaseAIAdapter:
                 num_return_sequences=num_return_sequences,
                 **kwargs
             )
-            return result[0]["generated-text"]
+            return result[0]["generated_text"]
         
         except Exception as e:
             logging.error(f"Generation failed for prompt '{prompt}': {e}")
