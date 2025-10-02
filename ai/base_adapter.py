@@ -29,7 +29,20 @@ class BaseAIAdapter:
                 num_return_sequences=num_return_sequences,
                 **kwargs
             )
-            return result[0]["generated_text"]
+            if (
+                isinstance(result, list)
+                and len(result) > 0
+                and isinstance(result[0], dict)
+                and "generated_text" in result[0]
+            ):
+                return result[0]["generated_text"]
+            else:
+                logging.error(
+                    f"Unexpected generator output for prompt '{prompt}': {result}"
+                )
+                raise RuntimeError(
+                    f"Text generation failed: Unexpected generator output: {result}"
+                )
         
         except Exception as e:
             logging.error(f"Generation failed for prompt '{prompt}': {e}")
