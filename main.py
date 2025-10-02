@@ -11,13 +11,16 @@ class Main(MainWindow):
     def __init__(self):
         super().__init__()
 
-    def main_test(self):
-        ai = AIManager()
-        user_input = "Hello, my name is"
-        output = ai.generate_text(user_input)
-        print(f"AI Output: {output}")
+        self.manager = AIManager()
+        user_input = "Hello this is a Test"
+
+        # Try to generate text using the AIManager; if it fails, print RuntimeError
+        try:
+            text = self.manager.generate_text(user_input)
+            print(f"AI response: {text}")
+        except RuntimeError as error:
+            print(f"AI generation failed: {error}")
 
 if __name__ == "__main__":
     app = Main()
-    app.main_test() # TODO: remove this later
     app.mainloop()
