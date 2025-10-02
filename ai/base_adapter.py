@@ -1,12 +1,12 @@
 import logging
-from typing import Any, Optional
+from typing import Any, Optional, Callable, List, Dict
 
 class BaseAIAdapter:
     """
     Base class that encapsulates the HF text-generation pipeline.
     Other adapters (chat, embeddings, etc.) can follow the same pattern.
     """
-    def __init__(self, *, generator: Optional[Any] = None, model_name: str = "distilgpt2"):
+    def __init__(self, *, generator: Optional[Callable[..., List[Dict[str, str]]]] = None, model_name: str = "distilgpt2"):
 
         if generator is not None:
             self._generator = generator
