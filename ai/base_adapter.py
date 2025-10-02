@@ -3,7 +3,7 @@ from typing import Any, Optional, Callable, List, Dict
 
 class BaseAIAdapter:
     """
-    Base class that encapsulates the HF text-generation pipeline.
+    Base class that encapsulates the Hugging Face text-generation pipeline.
     Other adapters (chat, embeddings, etc.) can follow the same pattern.
     """
     def __init__(self, *, generator: Optional[Callable[..., List[Dict[str, str]]]] = None, model_name: str = "distilgpt2"):
