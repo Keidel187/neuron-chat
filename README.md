@@ -127,8 +127,11 @@ python main.py  # Run directly from source
 ### Running Tests
 
 ```bash
-# Test infrastructure is not yet implemented
-# Manual testing: python main.py
+# Run tests using pytest
+pytest tests/
+
+# Run tests with verbose output
+pytest tests/ -v
 ```
 
 ## 🤝 Contributing
@@ -146,6 +149,7 @@ We welcome contributions! Please follow these steps:
 - Follow PEP 8 Python coding standards
 - Use meaningful commit messages
 - Ensure code is well-documented with docstrings
+- Run tests before submitting PR: `pytest tests/`
 - Test changes manually before submitting PR
 
 ## 📝 Roadmap
