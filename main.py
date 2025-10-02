@@ -14,7 +14,7 @@ class Main(MainWindow):
         self.manager = AIManager()
         user_input = "Hello this is a Test"
 
-        # Try to generate text using the AIManager if not print RuntimeError
+        # Try to generate text using the AIManager; if it fails, print RuntimeError
         try:
             text = self.manager.generate_text(user_input)
             print(f"AI response: {text}")
