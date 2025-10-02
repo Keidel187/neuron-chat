@@ -203,4 +203,4 @@ Active Development
 
 ---
 
-*Last updated: 27.09.2025*
+*Last updated: 02.10.2025*
